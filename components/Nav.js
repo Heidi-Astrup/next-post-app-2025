@@ -11,13 +11,34 @@ export default function Nav() {
 
   return (
     <nav className={styles.nav}>
-      <Link href="/" className={`${styles.navLink} ${pathname === "/" ? styles.active : ""}`}>
+      <Link
+        href="/"
+        className={`${styles.navLink} ${pathname === "/" ? styles.active : ""}`}
+      >
         Home
       </Link>
-      <Link href="/posts" className={`${styles.navLink} ${pathname === "/posts" ? styles.active : ""}`}>
+      <Link
+        href="/users"
+        className={`${styles.navLink} ${
+          pathname === "/users" ? styles.active : ""
+        }`}
+      >
+        Users
+      </Link>
+      <Link
+        href="/posts"
+        className={`${styles.navLink} ${
+          pathname === "/posts" ? styles.active : ""
+        }`}
+      >
         Posts
       </Link>
-      <Link href="/posts/create" className={`${styles.navLink} ${pathname === "/posts/create" ? styles.active : ""}`}>
+      <Link
+        href="/posts/create"
+        className={`${styles.navLink} ${
+          pathname === "/posts/create" ? styles.active : ""
+        }`}
+      >
         New Post
       </Link>
     </nav>
