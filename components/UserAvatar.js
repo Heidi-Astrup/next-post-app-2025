@@ -1,6 +1,5 @@
 // Async Server Component - fetches user data on the server
 import Image from "next/image";
-import styles from "./UserAvatar.module.css";
 
 export default async function UserAvatar({ uid }) {
   const url = `${process.env.NEXT_PUBLIC_FB_DB_URL}/users/${uid}.json`;
@@ -10,17 +9,19 @@ export default async function UserAvatar({ uid }) {
   const user = await response.json();
 
   return (
-    <div className={styles.avatar}>
+    <div className="flex items-center gap-3 mb-3">
       <Image
         src={user.image}
         alt={user.name}
         width={400}
         height={400}
-        className={styles.avatarImage}
+        className="w-10 h-10 rounded-full object-cover shrink-0"
       />
-      <span className={styles.userInfo}>
-        <h3>{user.name}</h3>
-        <p>{user.title}</p>
+      <span className="flex flex-col gap-0.5">
+        <h3 className="text-sm font-semibold m-0 text-[#ededed] leading-tight">
+          {user.name}
+        </h3>
+        <p className="text-xs m-0 text-gray-400 leading-tight">{user.title}</p>
       </span>
     </div>
   );
