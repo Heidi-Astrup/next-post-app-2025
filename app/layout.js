@@ -5,18 +5,18 @@ import Nav from "@/components/Nav";
 // Configure Google Fonts with CSS variables
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"]
+  subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
-  subsets: ["latin"]
+  subsets: ["latin"],
 });
 
 // Metadata for SEO
 export const metadata = {
   title: "Next.js Post App",
-  description: "A modern post application built with Next.js 16"
+  description: "A modern post application built with Next.js 16",
 };
 
 // Root Layout - wraps all pages
